@@ -2,643 +2,895 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#170d2d">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#160b29">
+<title>Happy Birthday Fortunata 🎂</title>
 
-    <title>Happy Birthday Fortunata 🎂</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+    --bg: #160b29;
+    --pink: #ff9bc5;
+    --gold: #ffdf98;
+    --white: #fff8ff;
+    --muted: #d6c5e8;
+}
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        :root {
-            --purple: #170d2d;
-            --pink: #ff91bd;
-            --gold: #ffd887;
-            --white: #fff8ff;
-        }
+html { scroll-behavior: smooth; }
 
-        html {
-            scroll-behavior: smooth;
-        }
+body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg);
+    color: var(--white);
+    overflow-x: hidden;
+}
 
-        body {
-            font-family: 'DM Sans', sans-serif;
-            background: var(--purple);
-            color: var(--white);
-            overflow-x: hidden;
-        }
+body.no-scroll { overflow: hidden; }
 
-        .background {
-            position: fixed;
-            inset: 0;
-            z-index: -2;
-            background:
-                radial-gradient(ellipse at 15% 20%, #713c8150, transparent 45%),
-                radial-gradient(ellipse at 85% 70%, #bc467a30, transparent 40%),
-                linear-gradient(145deg, #10091f, #241038 55%, #130b27);
-        }
+.background {
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    background:
+        radial-gradient(ellipse at 15% 15%, #a34b8a35, transparent 40%),
+        radial-gradient(ellipse at 85% 70%, #6939b545, transparent 40%),
+        linear-gradient(145deg, #10081d, #28133d 55%, #140a26);
+}
 
-        .stars {
-            position: fixed;
-            inset: 0;
-            z-index: -1;
-            pointer-events: none;
-            overflow: hidden;
-        }
+#stars {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    overflow: hidden;
+}
 
-        .star {
-            position: absolute;
-            color: var(--gold);
-            animation: twinkle 2s ease-in-out infinite alternate;
-        }
+.star {
+    position: absolute;
+    color: var(--gold);
+    animation: twinkle 2s infinite alternate;
+}
 
-        @keyframes twinkle {
-            from { opacity: .2; transform: scale(.7); }
-            to { opacity: 1; transform: scale(1.2); }
-        }
+@keyframes twinkle {
+    from { opacity: .2; transform: scale(.7); }
+    to { opacity: 1; transform: scale(1.2); }
+}
 
-        .navbar {
-            max-width: 1100px;
-            margin: auto;
-            padding: 25px 6%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
+nav {
+    max-width: 1100px;
+    margin: auto;
+    padding: 24px 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
-        .logo {
-            color: var(--gold);
-            font-size: 1.1rem;
-            font-weight: 700;
-            letter-spacing: 1px;
-        }
+.logo {
+    color: var(--gold);
+    font-weight: 700;
+    letter-spacing: 2px;
+}
 
-        .nav-tag {
-            border: 1px solid #ffffff30;
-            border-radius: 50px;
-            padding: 9px 16px;
-            color: #f9ddeb;
-            font-size: .8rem;
-        }
+.nav-tag {
+    border: 1px solid #ffffff30;
+    padding: 9px 15px;
+    border-radius: 50px;
+    color: #f4dced;
+    font-size: .78rem;
+}
 
-        .hero {
-            min-height: 82vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 55px 20px 75px;
-        }
+.hero {
+    min-height: 88vh;
+    padding: 45px 20px 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
 
-        .hero-content {
-            width: 100%;
-            max-width: 780px;
-            animation: appear 1.2s ease both;
-        }
+.hero-content {
+    max-width: 780px;
+    width: 100%;
+    animation: appear 1s ease both;
+}
 
-        @keyframes appear {
-            from { opacity: 0; transform: translateY(25px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
+@keyframes appear {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
 
-        .eyebrow {
-            display: inline-block;
-            color: var(--gold);
-            font-size: .78rem;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-            margin-bottom: 24px;
-        }
+.eyebrow, .section-label {
+    color: var(--gold);
+    font-size: .75rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
 
-        .cake {
-            font-size: 4.3rem;
-            display: block;
-            margin-bottom: 20px;
-            filter: drop-shadow(0 0 25px #ff91bd55);
-            animation: float 3s ease-in-out infinite;
-        }
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.6rem, 8vw, 5.6rem);
+    line-height: 1.12;
+    margin: 22px 0 15px;
+}
 
-        @keyframes float {
-            0%, 100% { transform: translateY(0) rotate(-2deg); }
-            50% { transform: translateY(-12px) rotate(2deg); }
-        }
+h1 span {
+    display: block;
+    background: linear-gradient(90deg, #ffb1d3, #ffe4a1, #ff9bc5);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
 
-        h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(2.6rem, 8vw, 5.5rem);
-            font-weight: 600;
-            line-height: 1.12;
-            margin-bottom: 15px;
-        }
+.subtitle {
+    max-width: 560px;
+    margin: 18px auto 30px;
+    line-height: 1.9;
+    color: var(--muted);
+}
 
-        h1 span {
-            display: block;
-            background: linear-gradient(90deg, #ffb6d3, #ffe5a5, #ff91bd);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
+.btn {
+    display: inline-block;
+    border: none;
+    border-radius: 50px;
+    padding: 15px 24px;
+    background: linear-gradient(120deg, #ff9bc5, #ffdf98);
+    color: #291331;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 8px 30px #ff91bd30;
+    transition: transform .25s, box-shadow .25s;
+}
 
-        .subtitle {
-            color: #d6c8e6;
-            max-width: 520px;
-            margin: 22px auto 30px;
-            line-height: 1.9;
-            font-size: 1rem;
-        }
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px #ff91bd55;
+}
 
-        .date-label {
-            color: var(--gold);
-            font-size: .82rem;
-            letter-spacing: 2px;
-            margin-bottom: 30px;
-        }
+.btn:disabled {
+    opacity: .5;
+    cursor: not-allowed;
+    transform: none;
+}
 
-        .btn {
-            display: inline-block;
-            border: none;
-            cursor: pointer;
-            border-radius: 50px;
-            padding: 15px 25px;
-            background: linear-gradient(120deg, #ff91bd, #ffd887);
-            color: #26102f;
-            font-family: inherit;
-            font-weight: 700;
-            font-size: .95rem;
-            text-decoration: none;
-            box-shadow: 0 8px 35px #ff91bd30;
-            transition: transform .25s, box-shadow .25s;
-        }
+.cake-stage {
+    width: 100%;
+    max-width: 450px;
+    margin: 15px auto 20px;
+    padding: 12px;
+    position: relative;
+    text-align: center;
+}
 
-        .btn:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 40px #ff91bd55;
-        }
+.cake-glow {
+    position: absolute;
+    width: 240px;
+    height: 170px;
+    top: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #ff91bd20;
+    filter: blur(45px);
+    border-radius: 50%;
+    transition: background .5s;
+}
 
-        .section {
-            max-width: 900px;
-            margin: auto;
-            padding: 65px 22px;
-            text-align: center;
-        }
+.cake-stage.lit .cake-glow {
+    background: #ffb52d50;
+}
 
-        .section-label {
-            color: var(--pink);
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            font-size: .75rem;
-            margin-bottom: 14px;
-        }
+.cake-art {
+    position: relative;
+    width: 250px;
+    height: 220px;
+    margin: 0 auto;
+    animation: cakeFloat 3s ease-in-out infinite;
+}
 
-        h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(2rem, 5vw, 3rem);
-            margin-bottom: 25px;
-        }
+@keyframes cakeFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-7px); }
+}
 
-        .message-card {
-            position: relative;
-            overflow: hidden;
-            padding: clamp(28px, 6vw, 55px);
-            background: linear-gradient(135deg, #ffffff0d, #ffffff05);
-            border: 1px solid #ffffff1c;
-            border-radius: 25px;
-            box-shadow: 0 20px 70px #00000020;
-        }
+.candles {
+    position: absolute;
+    bottom: 145px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 13px;
+    z-index: 4;
+}
 
-        .message-card::before {
-            content: "✦";
-            position: absolute;
-            top: 10px;
-            right: 22px;
-            color: var(--gold);
-            font-size: 2rem;
-            opacity: .7;
-        }
+.candle {
+    position: relative;
+    width: 12px;
+    height: 47px;
+    border-radius: 3px 3px 1px 1px;
+    background: repeating-linear-gradient(
+        135deg, #ff8fbd 0 5px, #fff3f8 5px 10px
+    );
+}
 
-        .message-card p {
-            color: #e5d9ef;
-            font-size: 1rem;
-            line-height: 2;
-            margin-bottom: 17px;
-        }
+.candle:nth-child(even) {
+    height: 39px;
+    background: repeating-linear-gradient(
+        135deg, #ffd887 0 5px, #fff8e8 5px 10px
+    );
+}
 
-        .signature {
-            font-family: 'Playfair Display', serif;
-            color: var(--gold);
-            font-size: 1.3rem;
-            font-style: italic;
-            margin-top: 25px;
-        }
+.wick {
+    position: absolute;
+    width: 2px;
+    height: 7px;
+    top: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #382033;
+}
 
-        .wishes-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 18px;
-            margin-top: 35px;
-        }
+.flame {
+    position: absolute;
+    width: 14px;
+    height: 22px;
+    top: -28px;
+    left: 50%;
+    transform: translateX(-50%) scale(0);
+    transform-origin: center bottom;
+    opacity: 0;
+    border-radius: 50% 50% 45% 45%;
+    background: linear-gradient(to top, #ff671e, #ffcb43 60%, #fff7b5);
+    box-shadow: 0 0 13px #ffb52d, 0 0 28px #ff8b3380;
+}
 
-        .wish {
-            padding: 27px 16px;
-            border-radius: 18px;
-            background: #ffffff08;
-            border: 1px solid #ffffff15;
-            transition: transform .25s, background .25s;
-        }
+.cake-stage.lit .flame {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+    animation: flicker .5s infinite alternate;
+}
 
-        .wish:hover {
-            transform: translateY(-7px);
-            background: #ffffff12;
-        }
+@keyframes flicker {
+    from {
+        transform: translateX(-50%) scale(1) rotate(-5deg);
+        filter: brightness(1);
+    }
+    to {
+        transform: translateX(-50%) scale(1.12) rotate(5deg);
+        filter: brightness(1.2);
+    }
+}
 
-        .wish-icon {
-            font-size: 2rem;
-            display: block;
-            margin-bottom: 15px;
-        }
+.cake-top {
+    position: absolute;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 225px;
+    height: 38px;
+    border: 2px solid #ffd5e6;
+    border-radius: 50%;
+    background: linear-gradient(#fff0f7, #ff9fc5);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: #bd477a;
+    z-index: 3;
+}
 
-        .wish h3 {
-            color: var(--gold);
-            font-size: 1rem;
-            margin-bottom: 10px;
-        }
+.cake-layer {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: inset 0 -6px 0 #00000010;
+}
 
-        .wish p {
-            color: #d0c2df;
-            font-size: .88rem;
-            line-height: 1.7;
-        }
+.layer-one {
+    bottom: 35px;
+    width: 215px;
+    height: 65px;
+    border-radius: 13px 13px 18px 18px;
+    background: linear-gradient(90deg, #e97da8, #ffc1d8, #ec85ae);
+}
 
-        .final-section {
-            padding-bottom: 100px;
-        }
+.layer-two {
+    bottom: 86px;
+    width: 160px;
+    height: 40px;
+    border-radius: 12px 12px 8px 8px;
+    background: linear-gradient(90deg, #a58bff, #e0ceff, #a58bff);
+}
 
-        .final-section p {
-            color: #d6c8e6;
-            line-height: 1.8;
-            margin-bottom: 25px;
-        }
+.cake-plate {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 240px;
+    height: 18px;
+    border-radius: 50%;
+    background: linear-gradient(#fff5fa, #d8b5e7);
+    box-shadow: 0 7px 20px #00000030;
+}
 
-        footer {
-            text-align: center;
-            padding: 25px 15px;
-            color: #b7a4cb;
-            border-top: 1px solid #ffffff12;
-            font-size: .8rem;
-        }
+.cake-caption {
+    color: #ffe1ee;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    margin: 5px 0 18px;
+    line-height: 1.7;
+}
 
-        .heart {
-            color: #ff91bd;
-        }
+.cake-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+}
 
-        .confetti {
-            position: fixed;
-            top: -15px;
-            z-index: 10;
-            pointer-events: none;
-            animation: fall linear forwards;
-        }
+.secondary-btn {
+    border: 1px solid #ffb6d366;
+    background: #ffffff08;
+    color: #ffe5f0;
+    border-radius: 50px;
+    padding: 14px 20px;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+}
 
-        @keyframes fall {
-            to {
-                transform: translateY(110vh) rotate(720deg);
-                opacity: 0;
-            }
-        }
+.secondary-btn:disabled {
+    opacity: .4;
+    cursor: not-allowed;
+}
 
-        .popup {
-            position: fixed;
-            inset: 0;
-            z-index: 20;
-            background: #080411dd;
-            display: none;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-            backdrop-filter: blur(8px);
-        }
+.cake-hint {
+    color: #cdbbdc;
+    font-size: .8rem;
+    margin-top: 16px;
+    line-height: 1.7;
+}
 
-        .popup.show {
-            display: flex;
-            animation: appear .4s ease;
-        }
+.section {
+    max-width: 920px;
+    margin: auto;
+    padding: 65px 22px;
+    text-align: center;
+}
 
-        .popup-content {
-            width: 100%;
-            max-width: 460px;
-            text-align: center;
-            padding: 40px 28px;
-            border: 1px solid #ffd88750;
-            border-radius: 25px;
-            background: linear-gradient(145deg, #321942, #190d2c);
-        }
+.section-label {
+    color: var(--pink);
+    margin-bottom: 15px;
+}
 
-        .popup-content .big-heart {
-            font-size: 3rem;
-            margin-bottom: 15px;
-        }
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin: 12px 0 27px;
+}
 
-        .popup-content h2 {
-            color: var(--gold);
-        }
+.message-card {
+    padding: clamp(27px, 6vw, 55px);
+    background: linear-gradient(135deg, #ffffff0d, #ffffff05);
+    border: 1px solid #ffffff1c;
+    border-radius: 25px;
+    box-shadow: 0 20px 70px #00000020;
+    position: relative;
+    overflow: hidden;
+}
 
-        .popup-content p {
-            line-height: 1.9;
-            color: #eadced;
-            margin-bottom: 25px;
-        }
+.message-card::after {
+    content: "✦";
+    position: absolute;
+    right: 20px;
+    top: 12px;
+    color: var(--gold);
+    font-size: 2rem;
+}
 
-        .close-btn {
-            background: transparent;
-            border: 1px solid #ffffff40;
-            color: white;
-            border-radius: 50px;
-            padding: 11px 25px;
-            cursor: pointer;
-            font: inherit;
-        }
+.message-card p {
+    color: #e5d9ef;
+    line-height: 2;
+    margin-bottom: 17px;
+}
 
-        @media (max-width: 650px) {
-            .navbar {
-                padding: 20px 5%;
-            }
+.signature {
+    font-family: 'Playfair Display', serif;
+    color: var(--gold);
+    font-size: 1.25rem;
+    font-style: italic;
+    margin-top: 24px;
+}
 
-            .hero {
-                min-height: 80vh;
-                padding: 40px 20px 55px;
-            }
+.wishes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-top: 35px;
+}
 
-            .cake {
-                font-size: 3.5rem;
-            }
+.wish {
+    padding: 28px 17px;
+    border-radius: 18px;
+    background: #ffffff08;
+    border: 1px solid #ffffff15;
+    transition: transform .25s, background .25s;
+}
 
-            .subtitle {
-                font-size: .92rem;
-            }
+.wish:hover {
+    transform: translateY(-6px);
+    background: #ffffff12;
+}
 
-            .wishes-grid {
-                grid-template-columns: 1fr;
-            }
+.wish-icon {
+    display: block;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
 
-            .wish {
-                padding: 25px;
-            }
+.wish h3 {
+    color: var(--gold);
+    margin-bottom: 10px;
+}
 
-            .section {
-                padding: 48px 20px;
-            }
+.wish p {
+    color: #d0c2df;
+    font-size: .88rem;
+    line-height: 1.8;
+}
 
-            .nav-tag {
-                font-size: .7rem;
-            }
-        }
+.final-section p {
+    color: var(--muted);
+    line-height: 1.9;
+    max-width: 570px;
+    margin: 0 auto 26px;
+}
 
-        @media (prefers-reduced-motion: reduce) {
-            *, *::before, *::after {
-                animation-duration: .01ms !important;
-                animation-iteration-count: 1 !important;
-                scroll-behavior: auto !important;
-                transition-duration: .01ms !important;
-            }
-        }
-    </style>
+footer {
+    text-align: center;
+    padding: 27px 15px;
+    border-top: 1px solid #ffffff12;
+    color: #b7a4cb;
+    font-size: .82rem;
+    line-height: 1.9;
+}
+
+.heart { color: var(--pink); }
+
+.confetti {
+    position: fixed;
+    top: -15px;
+    z-index: 50;
+    pointer-events: none;
+    animation: fall linear forwards;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(110vh) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+.popup {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: #080411dd;
+    backdrop-filter: blur(8px);
+}
+
+.popup.show {
+    display: flex;
+    animation: appear .4s ease;
+}
+
+.popup-content {
+    width: 100%;
+    max-width: 460px;
+    text-align: center;
+    padding: 38px 27px;
+    border: 1px solid #ffd88750;
+    border-radius: 25px;
+    background: linear-gradient(145deg, #321942, #190d2c);
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.big-heart {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.popup-content h2 { color: var(--gold); }
+
+.popup-content p {
+    line-height: 1.9;
+    color: #eadced;
+    margin-bottom: 25px;
+}
+
+@media (max-width: 650px) {
+    nav { padding: 20px 5%; }
+
+    .hero {
+        min-height: auto;
+        padding: 45px 18px 65px;
+    }
+
+    .subtitle { font-size: .93rem; }
+
+    .wishes-grid { grid-template-columns: 1fr; }
+
+    .wish { padding: 24px; }
+
+    .section { padding: 48px 20px; }
+
+    .cake-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cake-buttons button {
+        width: 100%;
+        max-width: 280px;
+    }
+}
+
+@media (max-width: 360px) {
+    .cake-art { transform: scale(.88); }
+    .cake-caption { margin-top: -10px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+    }
+}
+</style>
 </head>
 
 <body>
-    <div class="background"></div>
-    <div class="stars" id="stars"></div>
 
-    <nav class="navbar">
-        <div class="logo">✦ FORTUNATA</div>
-        <div class="nav-tag">A SPECIAL DAY ♡</div>
-    </nav>
+<div class="background"></div>
+<div id="stars"></div>
 
-    <main>
-        <section class="hero">
-            <div class="hero-content">
-                <span class="eyebrow">A beautiful day to celebrate you</span>
-                <span class="cake">🎂</span>
+<nav>
+    <div class="logo">✦ FORTUNATA</div>
+    <div class="nav-tag">A SPECIAL DAY ♡</div>
+</nav>
 
-                <h1>
-                    Happy Birthday
-                    <span>Fortunata!</span>
-                </h1>
+<main>
 
-                <p class="subtitle">
-                    Today is all about celebrating you, your beautiful
-                    journey, and the wonderful person you are.
-                    May your new year of life be filled with endless
-                    happiness, love, and beautiful surprises.
-                </p>
+<section class="hero">
+<div class="hero-content">
 
-                <div class="date-label">✦ YOUR DAY · YOUR MOMENT · YOUR MAGIC ✦</div>
+    <div class="eyebrow">Celebrating someone truly special</div>
 
-                <button class="btn" onclick="openMessage()">
-                    Open Your Birthday Surprise 💌
-                </button>
+    <h1>
+        Happy Birthday
+        <span>Fortunata! 🎉</span>
+    </h1>
+
+    <p class="subtitle">
+        Today is more than just a birthday. It is a celebration
+        of your life, your beautiful smile, and all the wonderful
+        things waiting for you in the future. ❤️
+    </p>
+
+    <div class="cake-stage" id="cakeStage">
+        <div class="cake-glow"></div>
+
+        <div class="cake-art">
+            <div class="candles">
+                <div class="candle"><div class="flame"></div><div class="wick"></div></div>
+                <div class="candle"><div class="flame"></div><div class="wick"></div></div>
+                <div class="candle"><div class="flame"></div><div class="wick"></div></div>
+                <div class="candle"><div class="flame"></div><div class="wick"></div></div>
+                <div class="candle"><div class="flame"></div><div class="wick"></div></div>
             </div>
-        </section>
 
-        <section class="section" id="message">
-            <div class="section-label">A message from the heart</div>
-            <h2>To Someone Special ♡</h2>
-
-            <div class="message-card">
-                <p>
-                    Dear Fortunata,
-                </p>
-
-                <p>
-                    On this special day, I wish you a life filled with
-                    genuine happiness, peace of mind, good health, and
-                    countless reasons to smile.
-                </p>
-
-                <p>
-                    May every dream you carry in your heart bring you
-                    closer to the beautiful future you deserve.
-                    May difficult days make you stronger, good days
-                    make you grateful, and every new beginning remind
-                    you that wonderful things are still ahead.
-                </p>
-
-                <p>
-                    Never forget how special you are. Keep shining,
-                    keep believing in yourself, and keep being the
-                    beautiful person that makes this world a little
-                    brighter.
-                </p>
-
-                <p>
-                    May this new chapter bring you more blessings,
-                    unforgettable memories, success, and love than
-                    you could ever imagine.
-                </p>
-
-                <div class="signature">
-                    Happy Birthday, Fortunata! ♡
-                </div>
+            <div class="cake-top">
+                <span>♡</span><span>✦</span><span>♡</span>
             </div>
-        </section>
 
-        <section class="section">
-            <div class="section-label">My wishes for you</div>
-            <h2>May Your Year Be Beautiful</h2>
+            <div class="cake-layer layer-one"></div>
+            <div class="cake-layer layer-two"></div>
+            <div class="cake-plate"></div>
+        </div>
 
-            <div class="wishes-grid">
-                <div class="wish">
-                    <span class="wish-icon">💖</span>
-                    <h3>Endless Love</h3>
-                    <p>
-                        May you always be surrounded by genuine love,
-                        kindness, and people who appreciate you.
-                    </p>
-                </div>
+        <p class="cake-caption" id="cakeCaption">
+            A special birthday cake for my wonderful sibling. 🎂
+        </p>
 
-                <div class="wish">
-                    <span class="wish-icon">✨</span>
-                    <h3>Great Success</h3>
-                    <p>
-                        May your hard work open new doors and
-                        lead you towards all your dreams.
-                    </p>
-                </div>
-
-                <div class="wish">
-                    <span class="wish-icon">🌸</span>
-                    <h3>Peace & Happiness</h3>
-                    <p>
-                        May your heart find peace, your days bring
-                        laughter, and your life bloom beautifully.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <section class="section final-section">
-            <span class="cake">🎁</span>
-            <div class="section-label">One more thing...</div>
-            <h2>You Deserve All The Beautiful Things</h2>
-
-            <p>
-                May your birthday be as wonderful as the dreams
-                you hold, and may the year ahead surprise you
-                in the best possible ways.
-            </p>
-
-            <button class="btn" onclick="celebrate()">
-                Celebrate Fortunata! 🎉
+        <div class="cake-buttons">
+            <button class="btn" id="lightBtn" onclick="lightCandles()">
+                🕯️ Light the Candles
             </button>
-        </section>
-    </main>
 
-    <footer>
-        Made with <span class="heart">♥</span> and warm wishes for Fortunata.
-        <br><br>
-        May your light always shine.
-    </footer>
-
-    <div class="popup" id="popup" role="dialog"
-         aria-modal="true" aria-labelledby="popupTitle">
-        <div class="popup-content">
-            <div class="big-heart">💝</div>
-            <h2 id="popupTitle">A Special Wish For You</h2>
-
-            <p>
-                Fortunata, may every candle you blow out today
-                carry a wish that comes true. May your smile never
-                fade, your heart never lose hope, and your life
-                always have something beautiful to celebrate.
-                <br><br>
-                You deserve the very best. Happy Birthday! 🎂
-            </p>
-
-            <button class="close-btn" onclick="closeMessage()">
-                Close with Love ♡
+            <button class="secondary-btn" id="blowBtn"
+                    onclick="blowCandles()" disabled>
+                🌬️ Blow Out Candles
             </button>
         </div>
+
+        <p class="cake-hint">
+            Make a wish, Fortunata!<br>
+            Light the candles, close your eyes, and wish for something beautiful. ✨
+        </p>
     </div>
 
-    <script>
-        // Create beautiful twinkling stars
-        const stars = document.getElementById("stars");
+    <button class="btn" onclick="openMessage()">
+        💌 Open Your Birthday Surprise
+    </button>
 
-        for (let i = 0; i < 45; i++) {
-            const star = document.createElement("span");
-            star.className = "star";
-            star.textContent = Math.random() > 0.5 ? "✦" : "·";
+</div>
+</section>
 
-            star.style.left = Math.random() * 100 + "%";
-            star.style.top = Math.random() * 100 + "%";
-            star.style.fontSize = (Math.random() * 14 + 5) + "px";
-            star.style.animationDelay = Math.random() * 3 + "s";
-            star.style.animationDuration = (Math.random() * 2 + 1.5) + "s";
+<section class="section" id="message">
+    <div class="section-label">A message from your big brother</div>
+    <h2>To My Dear Little Sibling ❤️</h2>
 
-            stars.appendChild(star);
-        }
+    <div class="message-card">
+        <p>Dear Fortunata,</p>
 
-        // Birthday surprise popup
-        function openMessage() {
-            document.getElementById("popup").classList.add("show");
-            document.body.style.overflow = "hidden";
-            launchConfetti(70);
-        }
+        <p>
+            Happy birthday to my wonderful little sibling!
+            Today, I thank God for the gift of your life and
+            for the joy of having you as part of our family.
+        </p>
 
-        function closeMessage() {
-            document.getElementById("popup").classList.remove("show");
-            document.body.style.overflow = "";
-        }
+        <p>
+            As your big brother, one of the things I wish for
+            you most is to see you grow into a strong, kind,
+            confident, and successful person. May you always
+            remember that your dreams matter and that you
+            should never be afraid to work towards them.
+        </p>
 
-        // Close popup when clicking outside it
-        document.getElementById("popup").addEventListener("click", function(event) {
-            if (event.target === this) {
-                closeMessage();
-            }
-        });
+        <p>
+            Life will not always be easy, but I pray that you
+            find the courage to face every challenge, the wisdom
+            to make good decisions, and the strength to keep
+            moving forward even when things become difficult.
+        </p>
 
-        // Close popup with Escape key
-        document.addEventListener("keydown", function(event) {
-            if (event.key === "Escape") {
-                closeMessage();
-            }
-        });
+        <p>
+            May God protect you, guide your steps, bless your
+            education and future, and fill your life with good
+            health, peace, happiness, and genuine people.
+        </p>
 
-        // Confetti animation
-        function launchConfetti(amount = 100) {
-            const colors = ["#ff91bd", "#ffd887", "#c5a3ff", "#ffffff", "#ff6b6b"];
+        <p>
+            No matter how much we grow or where life takes us,
+            you will always be my little sibling. Keep smiling,
+            keep learning, keep dreaming, and never forget
+            how valuable you are.
+        </p>
 
-            for (let i = 0; i < amount; i++) {
-                const piece = document.createElement("div");
-                piece.className = "confetti";
+        <p>
+            Enjoy your special day, Fortunata. May this new
+            chapter of your life bring you closer to everything
+            beautiful that you deserve.
+        </p>
 
-                piece.style.left = Math.random() * 100 + "vw";
-                piece.style.backgroundColor =
-                    colors[Math.floor(Math.random() * colors.length)];
+        <div class="signature">
+            With love, your big brother. ❤️
+        </div>
+    </div>
+</section>
 
-                piece.style.width = (Math.random() * 8 + 5) + "px";
-                piece.style.height = (Math.random() * 10 + 6) + "px";
-                piece.style.borderRadius = Math.random() > 0.5 ? "50%" : "2px";
-                piece.style.animationDuration = (Math.random() * 3 + 2) + "s";
-                piece.style.animationDelay = Math.random() * 0.8 + "s";
+<section class="section">
+    <div class="section-label">My prayers and wishes for you</div>
+    <h2>A Beautiful Year Ahead</h2>
 
-                document.body.appendChild(piece);
+    <div class="wishes-grid">
+        <div class="wish">
+            <span class="wish-icon">🙏</span>
+            <h3>God's Blessings</h3>
+            <p>
+                May God protect you, guide you, and give you
+                wisdom and strength in every season of life.
+            </p>
+        </div>
 
-                setTimeout(() => piece.remove(), 6500);
-            }
-        }
+        <div class="wish">
+            <span class="wish-icon">🌟</span>
+            <h3>Dreams & Success</h3>
+            <p>
+                May your efforts bring great results, your
+                knowledge grow, and your dreams become reality.
+            </p>
+        </div>
 
-        // Main birthday celebration
-        function celebrate() {
-            launchConfetti(160);
-        }
-    </script>
+        <div class="wish">
+            <span class="wish-icon">💖</span>
+            <h3>Love & Happiness</h3>
+            <p>
+                May your heart always find reasons to smile
+                and may you be surrounded by people who care.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="section final-section">
+    <div style="font-size:4rem; margin-bottom:20px;">🎁</div>
+    <div class="section-label">One last birthday wish</div>
+    <h2>Keep Shining, Fortunata!</h2>
+
+    <p>
+        Your story is still unfolding, and beautiful chapters
+        are waiting for you. Celebrate yourself today.
+        You are loved, appreciated, and wished nothing but
+        the very best.
+    </p>
+
+    <button class="btn" onclick="celebrate()">
+        🎉 Let's Celebrate!
+    </button>
+</section>
+
+</main>
+
+<footer>
+    Made with <span class="heart">♥</span> by your big brother.<br>
+    Happy Birthday, Fortunata. May your light always shine. ✨
+</footer>
+
+<div class="popup" id="popup" role="dialog"
+     aria-modal="true" aria-labelledby="popupTitle">
+    <div class="popup-content">
+        <div class="big-heart">💝</div>
+
+        <h2 id="popupTitle">A Special Wish For You</h2>
+
+        <p>
+            Fortunata, may every candle you blow out today
+            carry a wish that comes true. May you grow in
+            wisdom, courage, kindness, and happiness.
+            <br><br>
+            May God open beautiful doors for you and protect
+            you in everything you do.
+            <br><br>
+            I am proud to have you as my little sibling.
+            Keep shining and never stop believing in yourself.
+            <br><br>
+            Happy Birthday! With love from your big brother. ❤️
+        </p>
+
+        <button class="btn" onclick="closeMessage()">
+            Close with Love ♡
+        </button>
+    </div>
+</div>
+
+<script>
+// Twinkling background stars
+const stars = document.getElementById("stars");
+
+for (let i = 0; i < 50; i++) {
+    const star = document.createElement("span");
+    star.className = "star";
+    star.textContent = Math.random() > 0.5 ? "✦" : "·";
+    star.style.left = Math.random() * 100 + "%";
+    star.style.top = Math.random() * 100 + "%";
+    star.style.fontSize = (Math.random() * 13 + 5) + "px";
+    star.style.animationDelay = Math.random() * 3 + "s";
+    star.style.animationDuration = (Math.random() * 2 + 1.5) + "s";
+    stars.appendChild(star);
+}
+
+// Confetti celebration
+function launchConfetti(amount = 100) {
+    const colors = [
+        "#ff91bd", "#ffd887", "#c5a3ff",
+        "#ffffff", "#ff6b6b", "#a8f0d0"
+    ];
+
+    for (let i = 0; i < amount; i++) {
+        const piece = document.createElement("div");
+        piece.className = "confetti";
+        piece.style.left = Math.random() * 100 + "vw";
+        piece.style.backgroundColor =
+            colors[Math.floor(Math.random() * colors.length)];
+        piece.style.width = (Math.random() * 8 + 5) + "px";
+        piece.style.height = (Math.random() * 10 + 6) + "px";
+        piece.style.borderRadius =
+            Math.random() > 0.5 ? "50%" : "2px";
+        piece.style.animationDuration = (Math.random() * 3 + 2) + "s";
+        piece.style.animationDelay = Math.random() * 0.5 + "s";
+
+        document.body.appendChild(piece);
+
+        setTimeout(() => piece.remove(), 6000);
+    }
+}
+
+// Light birthday candles
+function lightCandles() {
+    const stage = document.getElementById("cakeStage");
+    const lightBtn = document.getElementById("lightBtn");
+    const blowBtn = document.getElementById("blowBtn");
+    const caption = document.getElementById("cakeCaption");
+
+    stage.classList.remove("blown");
+    stage.classList.add("lit");
+
+    lightBtn.disabled = true;
+    blowBtn.disabled = false;
+
+    caption.textContent =
+        "Look at those beautiful flames! Make a wish, Fortunata! ✨";
+
+    launchConfetti(35);
+}
+
+// Blow out birthday candles
+function blowCandles() {
+    const stage = document.getElementById("cakeStage");
+    const lightBtn = document.getElementById("lightBtn");
+    const blowBtn = document.getElementById("blowBtn");
+    const caption = document.getElementById("cakeCaption");
+
+    stage.classList.remove("lit");
+    stage.classList.add("blown");
+
+    lightBtn.disabled = false;
+    blowBtn.disabled = true;
+
+    caption.textContent =
+        "May all your beautiful wishes come true! ❤️";
+
+    launchConfetti(120);
+
+    setTimeout(() => {
+        openMessage();
+    }, 700);
+}
+
+// Birthday message popup
+function openMessage() {
+    document.getElementById("popup").classList.add("show");
+    document.body.classList.add("no-scroll");
+    launchConfetti(60);
+}
+
+function closeMessage() {
+    document.getElementById("popup").classList.remove("show");
+    document.body.classList.remove("no-scroll");
+}
+
+document.getElementById("popup").addEventListener("click", function(event) {
+    if (event.target === this) closeMessage();
+});
+
+document.addEventListener("keydown", function(event) {
+    if (event.key === "Escape") closeMessage();
+});
+
+// Final celebration
+function celebrate() {
+    launchConfetti(160);
+}
+</script>
+
 </body>
 </html>
